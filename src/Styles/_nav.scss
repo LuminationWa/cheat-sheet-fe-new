@@ -1,0 +1,14 @@
+nav.no-user {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em 0 1em 0;
+  gap: 1em;
+  .nav-button {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  }
+  :hover {
+    top: -5px;
+  }
+}
