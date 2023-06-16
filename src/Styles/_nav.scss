@@ -1,14 +1,35 @@
 nav.no-user {
   display: flex;
-  justify-content: flex-end;
-  padding: 1em 0 1em 0;
-  gap: 1em;
-  .nav-button {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  gap: 1rem;
+  position: relative;
+  svg {
     position: relative;
     top: 0;
     transition: top ease 0.5s;
+    font-size: $fs3;
+    cursor: pointer;
   }
   :hover {
     top: -5px;
+  }
+  .menu-list {
+    position: absolute;
+    display: none;
+  }
+  .nav-btns {
+    display: flex;
+    gap: 1rem;
+    .nav-button {
+      position: relative;
+      top: 0;
+      transition: top ease 0.5s;
+      cursor: pointer;
+    }
+    :hover {
+      top: -5px;
+    }
   }
 }

@@ -1,10 +1,10 @@
 const StaticCheatsheet = (props) => {
     const info = props.data;
     return (
-        <div className="cheatsheet">
-            <h2>{info.title}</h2>
-            <p className="categories">{info.categories}</p>
-            <p className="description">{info.description}</p>
+        <div className="cheatsheet wrapper flow">
+            <h2 className="title">{info.title}</h2>
+            <p className="categories flow">{info.categories}</p>
+            <p className="description flow">{info.description}</p>
         </div>
     )
 };

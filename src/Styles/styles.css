@@ -1,17 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 nav.no-user {
   display: flex;
-  justify-content: flex-end;
-  padding: 1em 0 1em 0;
-  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  gap: 1rem;
+  position: relative;
 }
-nav.no-user .nav-button {
+nav.no-user svg {
   position: relative;
   top: 0;
   transition: top ease 0.5s;
+  font-size: clamp(1.94rem, 1.77rem + 0.87vw, 2.44rem);
+  cursor: pointer;
 }
 nav.no-user :hover {
   top: -5px;
+}
+nav.no-user .menu-list {
+  position: absolute;
+  display: none;
+}
+nav.no-user .nav-btns {
+  display: flex;
+  gap: 1rem;
+}
+nav.no-user .nav-btns .nav-button {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  cursor: pointer;
+}
+nav.no-user .nav-btns :hover {
+  top: -5px;
+}
+
+.cheatsheet {
+  background-color: hsla(357, 69%, 90%, 0.851);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 100%;
+  max-height: 400px;
+  overflow: scroll;
+}
+.cheatsheet p {
+  font-size: clamp(0.94rem, 0.92rem + 0.11vw, 1rem);
+  overflow: scroll;
+  font-weight: 300;
+}
+.cheatsheet .title {
+  font-size: clamp(1.62rem, 1.5rem + 0.58vw, 1.95rem);
+}
+.cheatsheet .categories {
+  color: #636262;
+}
+
+.overview {
+  max-height: 2000px;
+  padding: 1rem 0 1rem 0;
 }
 
 * {
@@ -47,6 +95,7 @@ h2,
 h3 {
   line-height: 1.1;
   text-wrap: balance;
+  font-family: "Karla", sans-serif;
 }
 
 .wrapper {
@@ -54,8 +103,8 @@ h3 {
   margin-inline: auto;
 }
 
-.flow > :where(:not(:first-child)) {
-  margin-top: 1em;
+.flow > *:not(:first-child) {
+  margin-top: 0.25rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

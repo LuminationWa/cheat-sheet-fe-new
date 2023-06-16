@@ -13,7 +13,7 @@ const CheatsheetOverview = () => {
     setCheatsheets(newCheatsheets);
   }, []);
 
-  return <div className="overview">
+  return <div className="overview wrapper">
     <StaticCheatsheet data={placeHolderCS[0]}/>
     {cheatsheets}
   </div>;
