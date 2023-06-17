@@ -1,0 +1,14 @@
+.default-main {
+    h1, h1 > span {
+        font-size: $fs4;
+        line-height: 1.1;
+        text-wrap: balance;
+        font-weight: bolder;
+    }
+    h1 > span {
+        color: $accent-color-400;
+    }
+    p {
+        color: $text-color-light;
+    }
+}
