@@ -21,10 +21,6 @@ const Nav = () => {
                     <ListItemButton><ListItemText primary="Subcategories" /></ListItemButton>
                 </List>
                 <DehazeIcon />
-                <div className="nav-btns">
-                    <a className="nav-button">Log in</a>
-                    <a className="nav-button">Sign up</a>
-                </div>
             </nav>
         );
     }

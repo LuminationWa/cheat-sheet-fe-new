@@ -21,19 +21,6 @@ nav.no-user .menu-list {
   position: absolute;
   display: none;
 }
-nav.no-user .nav-btns {
-  display: flex;
-  gap: 1rem;
-}
-nav.no-user .nav-btns .nav-button {
-  position: relative;
-  top: 0;
-  transition: top ease 0.5s;
-  cursor: pointer;
-}
-nav.no-user .nav-btns :hover {
-  top: -5px;
-}
 
 .cheatsheet {
   background-color: hsla(357, 69%, 90%, 0.851);
@@ -62,17 +49,57 @@ nav.no-user .nav-btns :hover {
   padding: 1rem 0 1rem 0;
 }
 
-.default-main h1, .default-main h1 > span {
-  font-size: clamp(2.33rem, 2.08rem + 1.25vw, 3.05rem);
+.default-main {
+  padding: 1rem 0 1rem 0;
+}
+.default-main .main-text {
+  padding: 0 0.9rem 0 0.9rem;
+}
+.default-main .main-text h1,
+.default-main .main-text h1 > span {
+  font-size: clamp(2.1rem, 2rem + 1.2vw, 3rem);
   line-height: 1.1;
   text-wrap: balance;
   font-weight: bolder;
 }
-.default-main h1 > span {
+.default-main .main-text h1 > span {
   color: #ed3921;
 }
-.default-main p {
+.default-main .main-text .main-subtext {
+  display: flex;
+  padding: 0.5rem 0 0.5rem 0;
+  flex-direction: column;
+}
+.default-main .main-text .main-subtext p {
   color: #636262;
+  font-size: clamp(0.94rem, 0.92rem + 0.11vw, 1rem);
+}
+.default-main .img-display {
+  margin-top: 1rem;
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  min-height: 100%;
+  position: relative;
+}
+.default-main .img-display img {
+  max-width: 50%;
+}
+.default-main .img-display .offset-img {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.default-main .img-display #offset-img-1 {
+  top: 50%;
+  left: 10%;
+  position: absolute;
+  z-index: 1;
+  max-width: 60%;
+}
+.default-main .img-display #offset-img-2 {
+  position: absolute;
+  z-index: 2;
+  max-width: 40%;
+  left: 40%;
+  top: 50px;
 }
 
 * {
@@ -82,10 +109,12 @@ nav.no-user .nav-btns :hover {
   line-height: 1.6;
   font-size: clamp(1.13rem, 1.08rem + 0.22vw, 1.25rem);
   font-family: "Merriweather", serif;
+  color: #292929;
 }
 
 body {
   background-color: #fae5e6;
+  background-image: linear-gradient(180deg, #fae5e6 52%, rgba(253, 246, 247, 0.5) 77%);
   height: 100vh;
   height: 100svh;
 }

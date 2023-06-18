@@ -12,10 +12,12 @@
   line-height: 1.6;
   font-size: $fs0;
   font-family: $font-family-2;
+  color: $text-color;
 }
 
 body {
   background-color: $background-color-400;
+  background-image: $bg-image-gradient;
   height: 100vh;
   height: 100svh;
 }

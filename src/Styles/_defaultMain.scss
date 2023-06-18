@@ -1,14 +1,52 @@
 .default-main {
-    h1, h1 > span {
-        font-size: $fs4;
-        line-height: 1.1;
-        text-wrap: balance;
-        font-weight: bolder;
+  padding: 1rem 0 1rem 0;
+  .main-text {
+    padding: 0 0.9rem 0 0.9rem;
+    h1,
+    h1 > span {
+      font-size: $fs4;
+      line-height: 1.1;
+      text-wrap: balance;
+      font-weight: bolder;
     }
     h1 > span {
-        color: $accent-color-400;
+      color: $accent-color-400;
     }
-    p {
+    .main-subtext {
+      display: flex;
+      padding: 0.5rem 0 0.5rem 0;
+      flex-direction: column;
+      p {
         color: $text-color-light;
+        font-size: $fs-1;
+      }
     }
+  }
+  .img-display {
+    margin-top: 1rem;
+    padding: 1rem 0 1rem 0;
+    display: flex;
+    min-height: 100%;
+    position: relative;
+    img {
+      max-width: 50%;
+    }
+    .offset-img {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #offset-img-1 {
+        top: 50%;
+        left: 10%;
+        position: absolute;
+        z-index: 1;    
+        max-width: 60%;    
+    }
+    #offset-img-2 {
+        position: absolute;
+        z-index: 2;
+        max-width: 40%;
+        left: 40%;
+        top: 50px;
+    }
+  }
 }

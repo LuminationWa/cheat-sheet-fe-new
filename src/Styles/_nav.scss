@@ -19,17 +19,4 @@ nav.no-user {
     position: absolute;
     display: none;
   }
-  .nav-btns {
-    display: flex;
-    gap: 1rem;
-    .nav-button {
-      position: relative;
-      top: 0;
-      transition: top ease 0.5s;
-      cursor: pointer;
-    }
-    :hover {
-      top: -5px;
-    }
-  }
 }
