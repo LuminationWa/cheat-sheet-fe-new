@@ -1,7 +1,7 @@
 .default-main {
   padding: 1rem 0 1rem 0;
   .main-text {
-    padding: 0 0.9rem 0 0.9rem;
+    padding: $general-padding-1;
     h1,
     h1 > span {
       font-size: $fs4;
@@ -26,13 +26,12 @@
     margin-top: 1rem;
     padding: 1rem 0 1rem 0;
     display: flex;
-    min-height: 100%;
     position: relative;
     img {
       max-width: 50%;
     }
     .offset-img {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        box-shadow: $box-shadow-1;
     }
     #offset-img-1 {
         top: 50%;

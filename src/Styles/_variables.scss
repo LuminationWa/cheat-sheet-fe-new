@@ -1,5 +1,5 @@
 //Font
-$font-family-1: "Karla", sans-serif;
+$font-family-1: sans-serif;
 $font-family-2: "Merriweather", serif;
 $fs-2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.8rem);
 $fs-1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1rem);
@@ -20,3 +20,7 @@ $background-color-500: hsla(357, 69%, 90%, 0.851);
 $bg-image-gradient: linear-gradient(180deg, #fae5e6 52%, rgba(253, 246, 247, 0.5) 77%);
 $text-color: #292929;
 $text-color-light: #636262;
+
+//Miscellaneous
+$box-shadow-1: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$general-padding-1: 0 0.9rem 0 0.9rem;
