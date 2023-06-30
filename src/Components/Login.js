@@ -10,7 +10,6 @@ const Login = (e) => {
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("1");
     const { username, password } = e.target.elements;
     dispatch(authActions.login({ username: username.value, password: password.value }));
   };
