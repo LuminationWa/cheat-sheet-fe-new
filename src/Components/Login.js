@@ -3,16 +3,26 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import TextField from "@mui/material/TextField";
-import { authActions } from "../redux/authSlice";
-import { useDispatch } from "react-redux";
+import { login } from "../redux/authThunks";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
 
 const Login = (e) => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const loginStatus = useSelector(state => state.auth.loginStatus); //Redux store state
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const { username, password } = e.target.elements;
-    dispatch(authActions.login({ username: username.value, password: password.value }));
+    dispatch(login({ username: username.value, password: password.value })); //Handles localStorage updates and redirects
   };
+
+  useEffect(() => {
+    if (loginStatus) navigate('/');
+  }, [loginStatus])
 
   return (
     <main className="login-main">

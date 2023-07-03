@@ -2,6 +2,8 @@ import Nav from "./Components/Nav";
 import Login from "./Components/Login";
 import CheatsheetOverview from "./Components/CheatsheetOverview";
 import DefaultMain from "./Components/DefaultMain";
+import { useDispatch, useSelector } from "react-redux";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,7 +13,7 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const user = false;
+  const loginStatus = useSelector(state => state.auth.loginStatus); //Redux store state
   return (
     <Router>
       <div className="App">
@@ -19,7 +21,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={user ? <CheatsheetOverview /> : <DefaultMain />}
+            element={loginStatus ? <CheatsheetOverview /> : <DefaultMain />}
           />
           <Route path="/login" element={<Login />} />
         </Routes>
