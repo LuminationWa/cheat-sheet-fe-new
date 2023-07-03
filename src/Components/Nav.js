@@ -3,14 +3,12 @@ import List from "@mui/material/List";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemButton from "@mui/material/ListItemButton";
-import { useSelector } from "react-redux";
 
 const Nav = () => {
-  const user = useSelector((state) => state.auth.userInfo.username);
-  if (user) {
+  if (localStorage.token) {
     return (
         <div>
-            {user}
+            {localStorage.token}
         </div>
     );
   } else {
