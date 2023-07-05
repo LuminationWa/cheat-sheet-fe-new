@@ -16,7 +16,8 @@ export const login = createAsyncThunk(
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("token", data.token);
-        localStorage.setItem("userInfo", JSON.stringify(data.payload));
+        localStorage.setItem("userId", data.payload._id);
+        localStorage.setItem("username", data.payload.username);
         dispatch(loggedIn()); //Updates state
         return data;
       } else {
