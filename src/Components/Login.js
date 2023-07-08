@@ -7,6 +7,7 @@ import { login } from "../redux/authThunks";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 const Login = (e) => {
@@ -69,14 +70,16 @@ const Login = (e) => {
           </FormGroup>
         </form>
         <div className="login-utlity-btns">
-          <Button
-            sx={{
-              color: "#636262",
-              fontSize: "clamp(0.78rem, calc(0.77rem + 0.03vw), 0.8rem)",
-            }}
-          >
-            Register
-          </Button>
+          <Link to="/signup">
+            <Button
+              sx={{
+                color: "#636262",
+                fontSize: "clamp(0.78rem, calc(0.77rem + 0.03vw), 0.8rem)",
+              }}
+            >
+              Register
+            </Button>
+          </Link>
           <Button
             sx={{
               color: "#636262",
