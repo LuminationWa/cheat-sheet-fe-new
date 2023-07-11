@@ -30,3 +30,22 @@ export const login = createAsyncThunk(
     }
   }
 );
+
+export const createUser = createAsyncThunk(
+  "auth/createUser",
+  async ({ username, password, email }, { rejectWithValue, dispatch }) => {
+    try {
+      // Post request
+      const response = await fetch('/sign-up', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      console.log(response);
+    } catch (error) {
+      return rejectWithValue(error.response.data.message);
+    }
+  }
+)

@@ -17,7 +17,6 @@ const CheatsheetOverview = () => {
   }, [userCheatsheets]);
 
   return <section className="overview wrapper">
-    <StaticCheatsheet data={placeHolderCS[0]}/>
     {cheatsheets}
   </section>;
 };

@@ -8,7 +8,7 @@ const SignUp = () => {
             <div className="sign-up">
                 <h1 className="h1">Register</h1>
                 <form
-                    action=""
+                    action="sign-up"
                     method="post"
                     className="register-form"
                 >
@@ -23,6 +23,12 @@ const SignUp = () => {
                             name="password"
                             id="password"
                             label="Password"
+                            variant="outlined"
+                        />
+                        <TextField
+                            name="confirm-password"
+                            id="confirm-password"
+                            label="Confirm Password"
                             variant="outlined"
                         />
                         <TextField

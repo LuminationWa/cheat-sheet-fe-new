@@ -37,7 +37,10 @@ nav.no-user .menu-list {
   max-height: 400px;
   overflow: scroll;
 }
-.cheatsheet p {
+.cheatsheet .del-confirm {
+  background-color: red;
+}
+.cheatsheet .description {
   font-size: clamp(0.94rem, 0.92rem + 0.11vw, 1rem);
   overflow: scroll;
   font-weight: 300;

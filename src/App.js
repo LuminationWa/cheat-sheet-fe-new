@@ -13,13 +13,20 @@ import {
   Routes,
 } from "react-router-dom";
 import { fetchCheatsheets } from "./redux/cheatsheetsThunks";
+import { loggedIn } from "./redux/authSlice";
 
 function App() {
   const dispatch = useDispatch();
   const loginStatus = useSelector(state => state.auth.loginStatus); //Redux store state
   useEffect(() => {
+    if (localStorage.token) {
+      //Keeps up the other components also dependant on the logged in status
+      dispatch(loggedIn());
+    }
+  }, [localStorage.token])
+  useEffect(() => {
     if (loginStatus) {
-      dispatch(fetchCheatsheets(localStorage.userId));      
+      dispatch(fetchCheatsheets(localStorage.userId));
     }
   }, [loginStatus])
   return (
