@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={loginStatus ? <CheatsheetOverview /> : <DefaultMain />}
+            element={localStorage.token ? <CheatsheetOverview /> : <DefaultMain />}
           />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />

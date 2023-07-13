@@ -32,7 +32,7 @@ const Nav = () => {
           onClick={() => {
             handleEdit()
           }}>
-          {editStatus ? 'Edit' : 'Read-only mode'}
+          {editStatus ? 'Edit' : 'Read-only'}
         </button>
         <button onClick={() => {
           logOut();
