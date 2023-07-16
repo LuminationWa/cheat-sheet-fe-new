@@ -25,6 +25,7 @@ const Nav = () => {
   }
 
   if (loginStatus) {
+    //When user info can be retrieved
     return (
       <nav className="active-user wrapper">
         <Link to="/">Home</Link>
@@ -44,21 +45,25 @@ const Nav = () => {
   } else {
     return (
       <nav className="no-user wrapper">
-        <List
-          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-          className="menu-list"
-        >
-          <ListItemButton>
-            <ListItemText primary="Cheatsheets" />
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemText primary="Categories" />
-          </ListItemButton>
-          <ListItemButton>
-            <ListItemText primary="Subcategories" />
-          </ListItemButton>
-        </List>
-        <DehazeIcon />
+        {localStorage.token ? (
+          <div>
+          </div>
+        ) : (
+          <div>
+            <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }} className="menu-list">
+              <ListItemButton>
+                <ListItemText primary="Cheatsheets" />
+              </ListItemButton>
+              <ListItemButton>
+                <ListItemText primary="Categories" />
+              </ListItemButton>
+              <ListItemButton>
+                <ListItemText primary="Subcategories" />
+              </ListItemButton>
+            </List>
+            <DehazeIcon />
+          </div>
+        )}
       </nav>
     );
   }

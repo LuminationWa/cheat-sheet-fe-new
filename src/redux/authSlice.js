@@ -12,7 +12,6 @@ export const authSlice = createSlice({
   reducers: {
     // Modifies state based on action
     loggedIn: state => {
-      console.log("1");
       state.loginStatus = true;
     },
     loggedOut: state => {
