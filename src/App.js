@@ -22,6 +22,7 @@ function App() {
     if (localStorage.token) {
       //Keeps up the other components also dependant on the logged in status
       dispatch(loggedIn());
+      console.log(localStorage);
     }
   }, [localStorage.token])
   useEffect(() => {

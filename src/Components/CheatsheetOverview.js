@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import placeHolderCS from "./placeholderCheatsheets";
 import StaticCheatsheet from "./StaticCheatsheet";
+import CheatSheetModal from "./NewCheatsheetModal";
 import { useSelector } from "react-redux";
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
@@ -21,7 +22,11 @@ const CheatsheetOverview = () => {
 
   //The token confirmation is already gotten from the App.js file. Only other positibility is that loginStatus hasn't been set yet, conditional takes care of that.
   return <section className="overview wrapper">
-    {loginStatus ? cheatsheets :
+    {loginStatus ?
+      <div>
+        {cheatsheets}
+        <CheatSheetModal />
+      </div> :
       <Box sx={{ display: 'flex' }}>
         <CircularProgress />
       </Box>}
