@@ -24,8 +24,8 @@ const CheatsheetOverview = () => {
   return <section className="overview wrapper">
     {loginStatus ?
       <div>
-        {cheatsheets}
         <CheatSheetModal />
+        {cheatsheets}
       </div> :
       <Box sx={{ display: 'flex' }}>
         <CircularProgress />

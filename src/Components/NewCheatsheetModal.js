@@ -26,7 +26,7 @@ export default function TransitionsModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button onClick={handleOpen}>New cheatsheet</Button>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -43,6 +43,7 @@ export default function TransitionsModal() {
         <Fade in={open}>
           <Box sx={style}>
           <form action="cheatsheet/create" method="POST" className="cs-form">
+            <h1>New cheatsheet</h1>
             <input type="hidden" name="user" value={localStorage?.userId} />
             <TextField
               id="cheatsheet-title"
@@ -52,7 +53,6 @@ export default function TransitionsModal() {
               InputLabelProps={{
                 shrink: true,
               }}
-              required="true"
             />
             <TextField
               id="cheatsheet-description"
